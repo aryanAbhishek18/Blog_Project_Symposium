@@ -1,0 +1,45 @@
+<%- include('partials/header'); -%>
+
+<div class="container">
+    <br><br><br><br>
+    <div class="row">
+        <div class="col-sm-8">
+            <h1 class="welcome">Welcome to Blogit</h1>
+            <p class="intro">Blog whatever is on your mind.</p>
+            <p class="intro">Sign up and enjoy seamless blogging.</p>
+        </div>
+        <div class="col-sm-4">
+            <form action="/signUp" method="post">
+                <div class="form-group">
+                    <label for="inputFirstName">First Name</label>
+                    <input class="form-control inputBox" id="inputFirstName" name="inputFirstName"  placeholder="Enter your first name" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputSecondName">Second Name</label>
+                    <input class="form-control inputBox" id="inputSecondName" name="inputSecondName" placeholder="Enter your second name" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputUserName">Username</label>
+                    <input class="form-control inputBox" id="inputUserName" name="inputUserName" placeholder="Enter your username" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail">Email Id</label>
+                    <input type="email" class="form-control inputBox" id="inputEmail" name="inputEmail" placeholder="Enter your email" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control inputBox" name="inputPassword" id="inputPassword" placeholder="Enter your password" autocomplete="off" required>
+                </div>
+                <button type="submit" class="btn submitButton">Sign up</button>
+            </form>
+            <hr>
+            <form action="/signIn" method="get">
+                <small>Already have an account ?  <button type="submit" class="btn submitButton">Sign In</button> </small>
+            </form>    
+        </div>
+    </div>
+</div>    
+
+
+
+<%- include('partials/footer'); -%>

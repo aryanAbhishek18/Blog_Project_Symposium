@@ -1,0 +1,20 @@
+<%- include('partials/header'); -%>
+
+<div class="container signInContent">
+    <h1 class="welcome">Sign In</h1>
+    <form action="/profile" method="post">
+        <div class="form-group signInItem">
+            <label for="inputUserName">Username</label>
+            <input class="form-control inputBox" id="inputUserName" name="inputUserName" placeholder="Enter your username" autocomplete="off" required>
+        </div>
+        <div class="form-group signInItem">
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control inputBox" id="inputPassword" name="inputPassword" placeholder="Enter your password" autocomplete="off" required>
+        </div>
+        <button type="submit" class="btn btn-primary submitButton">Sign In</button>
+    </form>
+</div>
+
+
+
+<%- include('partials/footer'); -%>

@@ -1,0 +1,23 @@
+<%- include("partials/headerWhenLoggedIn") -%>
+<br><br>
+
+<div class="container">
+    <h1 class="welcome">Compose</h1>
+    <form action="/profile/alreadyComposed" method="post">
+        <div class="container">
+            <div class="form-group">
+                <label for="postTitle">Title</label>
+                <input type="text" class="form-control inputBox" id="postTitle" name="postTitle" autocomplete="off" required>
+            </div>
+            <div class="form-group">
+                <label for="postContent">Content</label>
+                <textarea class="form-control inputBox" id="postContent" name="postContent" autocomplete="off" rows="10" required></textarea>
+            </div>
+        </div> 
+        <button class="btn submitButton" type="submit">Publish</button>
+    </form>
+    <br>
+</div>
+
+
+<%- include("partials/footer") -%>

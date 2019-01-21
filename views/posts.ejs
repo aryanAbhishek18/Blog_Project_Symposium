@@ -1,0 +1,16 @@
+<%- include("partials/headerWhenLoggedIn") -%>
+<br><br>
+
+<div class="container">
+    <h1 class="welcome"><%=name%>'s posts :</h1>
+    <hr>
+    <% (blogList.sort((a, b) => b.dateOfCreation.localeCompare(a.dateOfCreation) || b.timeOfCreation.localeCompare(a.timeOfCreation))).forEach(function(post){ %>
+        <h1 class="welcome"><%=post.title%></h1>
+        <p style="margin-top: -30px">[ <i><%=post.createDateAndTime%> ]</i></p>
+        <p style="margin-top: -30px" class="intro"><%=post.content%></p>
+        <hr height="2px">
+    <% }); %>
+    <br><br>
+</div>
+
+<%- include("partials/footer") -%>
